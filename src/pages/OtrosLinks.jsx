@@ -29,14 +29,14 @@ const links = [
 
 export default function OtrosLinks() {
   return (
-    <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="animate-in fade-in duration-500">
       
-      <div className="mb-10 pl-3 border-l-4 border-brand-accent">
-        <h1 className="font-display text-4xl font-black text-brand-text tracking-tight">Links Útiles</h1>
-        <p className="text-lg text-brand-primary mt-2">Recursos y organismos gubernamentales para gestiones fiscales</p>
+      <div className="mb-12">
+        <h1 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-foreground mb-4">Links Útiles</h1>
+        <p className="text-lg text-accents-5 font-light tracking-wide">Recursos y organismos gubernamentales para gestiones fiscales</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {links.map((link, i) => {
           const Icon = link.icon
           return (
@@ -45,26 +45,22 @@ export default function OtrosLinks() {
               href={link.url} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-brand-card p-6 rounded-2xl border border-white/5 shadow-2xl hover:border-brand-primary/50 transition-all group block h-full flex flex-col relative overflow-hidden"
+              className="bg-background p-6 rounded-lg border-vercel flex flex-col group"
             >
-              <div className="absolute -right-10 -top-10 w-32 h-32 bg-brand-primary opacity-0 group-hover:opacity-10 blur-[50px] transition-opacity rounded-full pointer-events-none" />
-              
-              <div className="flex items-center gap-4 mb-4 relative z-10">
-                <div className="w-12 h-12 bg-brand-dark border border-white/10 text-brand-muted rounded-xl flex items-center justify-center shrink-0 group-hover:border-brand-primary/30 group-hover:text-brand-primary transition-colors">
-                  <Icon className="w-6 h-6" />
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 border border-accents-2 bg-accents-1 text-foreground rounded flex items-center justify-center shrink-0 group-hover:bg-foreground group-hover:text-background transition-colors">
+                  <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-display font-bold text-lg text-brand-text leading-tight group-hover:text-brand-primary transition-colors">
-                  {link.title}
-                </h3>
+                <ExternalLink className="w-4 h-4 text-accents-3 group-hover:text-foreground transition-colors" />
               </div>
               
-              <p className="text-brand-muted text-sm leading-relaxed mb-6 flex-1 relative z-10">
+              <h3 className="font-semibold text-foreground mb-2 group-hover:underline decoration-accents-3 underline-offset-4">
+                {link.title}
+              </h3>
+              
+              <p className="text-accents-5 text-sm leading-relaxed mt-auto">
                 {link.desc}
               </p>
-
-              <div className="flex items-center gap-1.5 text-sm font-semibold text-brand-accent group-hover:text-yellow-400 relative z-10">
-                 Acceder al sitio <ExternalLink className="w-4 h-4" />
-              </div>
             </a>
           )
         })}

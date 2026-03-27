@@ -21,51 +21,53 @@ export default function QueNecesito() {
   ]
 
   return (
-    <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="animate-in fade-in duration-500">
       
-      <div className="mb-10 pl-3 border-l-4 border-brand-accent">
-        <h1 className="font-display text-4xl font-black text-brand-text tracking-tight">¿Qué necesito para hacer Facturas?</h1>
-        <p className="text-lg text-brand-primary mt-2">Requisitos legales para encargar facturación (A · B · C · E · M)</p>
+      <div className="mb-12">
+        <h1 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-foreground mb-4">¿Qué necesito para hacer Facturas?</h1>
+        <p className="text-lg text-accents-5 font-light tracking-wide">Requisitos legales para encargar facturación (A · B · C · E · M)</p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         
         {/* Main List */}
         <div className="lg:col-span-8 space-y-4">
           {items.map((item, i) => (
-            <div key={i} className="flex gap-4 p-5 bg-brand-card rounded-2xl border border-white/5 shadow-2xl group hover:border-brand-primary/30 transition-colors">
-              <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg bg-brand-dark border border-brand-primary/20 text-brand-primary font-bold font-display group-hover:bg-brand-primary/10 transition-colors">
+            <div key={i} className="flex gap-4 p-5 rounded-lg border-vercel bg-background group">
+              <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded border border-accents-2 bg-accents-1 text-foreground font-semibold text-sm group-hover:bg-foreground group-hover:text-background transition-colors">
                 {i + 1}
               </div>
               <div>
-                <strong className="block text-brand-text mb-1 text-lg group-hover:text-brand-primary transition-colors">{item.label}</strong>
-                <p className="text-brand-muted leading-relaxed">{item.text}</p>
+                <strong className="block text-foreground mb-1 text-sm">{item.label}</strong>
+                <p className="text-accents-5 leading-relaxed text-sm">{item.text}</p>
               </div>
             </div>
           ))}
 
           {/* Special Warning Item */}
-          <div className="mt-8 p-6 bg-brand-dark rounded-2xl border border-yellow-500/30 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-2 h-full bg-yellow-500/50" />
-            <div className="flex gap-4 items-start pl-2">
-              <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+          <div className="mt-8 p-6 rounded-lg border border-accents-3 bg-accents-1/30">
+            <div className="flex flex-col sm:flex-row gap-5 items-start">
+              <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded border border-yellow-500/30 bg-yellow-500/10 text-yellow-500">
                 <AlertTriangle className="w-5 h-5" />
               </div>
               <div>
-                <strong className="block text-yellow-500 mb-2 text-lg">¿Es la primera vez que hacés facturas?</strong>
-                <p className="text-brand-muted leading-relaxed mb-4">
+                <strong className="block text-foreground mb-2">¿Es la primera vez que hacés facturas?</strong>
+                <p className="text-accents-5 leading-relaxed text-sm mb-5">
                   Necesitás descargar dos aplicativos desde la página de AFIP usando tu CUIT y Clave Fiscal:
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex gap-2 text-brand-muted">
-                    <PlayCircle className="w-5 h-5 flex-shrink-0 text-yellow-500/70" />
-                    <span>Administración de Punto de Venta y Domicilios</span>
-                  </li>
-                  <li className="flex gap-2 text-brand-muted">
-                    <PlayCircle className="w-5 h-5 flex-shrink-0 text-yellow-500/70" />
-                    <span>Autorización de Impresión de Comprobantes. <strong className="text-brand-text">Importante:</strong> tenés 10 días corridos para validar el trabajo. Si se vence el plazo, la autorización se anula y hay que volver a pedirla.</span>
-                  </li>
-                </ul>
+                <div className="space-y-3">
+                  <div className="flex gap-3 items-start p-3 rounded-md bg-background border border-accents-2">
+                    <PlayCircle className="w-4 h-4 flex-shrink-0 text-foreground mt-0.5" />
+                    <span className="text-sm text-accents-5"><strong className="text-foreground font-medium">1.</strong> Administración de Punto de Venta y Domicilios</span>
+                  </div>
+                  <div className="flex gap-3 items-start p-3 rounded-md bg-background border border-accents-2">
+                    <PlayCircle className="w-4 h-4 flex-shrink-0 text-foreground mt-0.5" />
+                    <span className="text-sm text-accents-5">
+                      <strong className="text-foreground font-medium">2.</strong> Autorización de Impresión de Comprobantes. 
+                      <span className="block mt-1 text-xs text-brand-danger">Atención: tenés 10 días corridos para validar el trabajo, o la autorización se anula.</span>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -73,19 +75,21 @@ export default function QueNecesito() {
 
         {/* Sidebar Info */}
         <div className="lg:col-span-4">
-          <div className="bg-brand-card text-brand-text p-6 rounded-2xl sticky top-8 shadow-2xl border border-white/5">
-            <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center mb-4">
-              <FileQuestion className="w-6 h-6 text-brand-accent" />
+          <div className="bg-background text-foreground p-8 rounded-xl sticky top-8 border-vercel flex flex-col items-start">
+            <div className="w-10 h-10 border border-accents-2 rounded bg-accents-1 flex items-center justify-center mb-6">
+              <FileQuestion className="w-5 h-5 text-foreground" />
             </div>
-            <h3 className="font-display font-bold text-xl mb-3 text-brand-text">¿Tenés alguna duda?</h3>
-            <p className="text-brand-muted text-sm leading-relaxed mb-6">
-              Los trámites pueden ser confusos. Si tenés dudas sobre qué comprobante necesitás o cómo hacer el trámite, comunicate con nosotros y te asesoramos rápidamente.
+            
+            <h3 className="font-semibold tracking-tight text-xl mb-3">¿Tenés alguna duda?</h3>
+            <p className="text-accents-5 text-sm leading-relaxed mb-8">
+              Los trámites gubernamentales pueden ser confusos. Si tenés dudas sobre qué comprobante necesitás o cómo hacer el trámite, comunicate con nosotros.
             </p>
+            
             <a
               href="https://wa.me/5491149543444" 
               target="_blank" 
               rel="noreferrer"
-              className="block w-full text-center py-3 bg-brand-primary hover:bg-brand-primaryHover text-black rounded-xl font-black tracking-wide transition-all shadow-[0_0_15px_rgba(0,255,0,0.3)] hover:shadow-[0_0_20px_rgba(0,255,0,0.5)]"
+              className="w-full text-center py-2.5 bg-foreground hover:bg-gray-200 text-background rounded-md text-sm font-semibold transition-colors"
             >
               Consultar por WhatsApp
             </a>
