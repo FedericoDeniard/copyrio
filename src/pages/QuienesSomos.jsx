@@ -1,4 +1,5 @@
 import { ShieldCheck, History, Clock } from 'lucide-react'
+import GlowCard from '../components/GlowCard'
 
 export default function QuienesSomos() {
   const features = [
@@ -27,30 +28,34 @@ export default function QuienesSomos() {
         <p className="text-lg text-accents-5 font-light tracking-wide">Más de 46 años en el mercado de la gráfica</p>
       </div>
 
-      <div className="border border-accents-2 bg-accents-1/30 rounded-xl p-8 lg:p-12 mb-12">
-        <p className="text-xl text-foreground leading-relaxed font-light max-w-4xl">
-          Somos una empresa que hace más de 46 años estamos en el mercado de la gráfica
-          y encuadernación, cubriendo todos los rubros que figuran en este sitio.
-          <br /><br />
-          <span className="text-accents-5">
-            Contamos con equipos de impresión de Blanco y Negro y Color de última
-            tecnología, digitales y con conectividad, para poder satisfacer a todos
-            nuestros clientes y cumplir sus necesidades en tiempo y forma.
-          </span>
-        </p>
-      </div>
+      <GlowCard className="mb-12">
+        <div className="p-8 lg:p-12">
+          <p className="text-xl text-foreground leading-relaxed font-light max-w-4xl">
+            Somos una empresa que hace más de 46 años estamos en el mercado de la gráfica
+            y encuadernación, cubriendo todos los rubros que figuran en este sitio.
+            <br /><br />
+            <span className="text-accents-5">
+              Contamos con equipos de impresión de Blanco y Negro y Color de última
+              tecnología, digitales y con conectividad, para poder satisfacer a todos
+              nuestros clientes y cumplir sus necesidades en tiempo y forma.
+            </span>
+          </p>
+        </div>
+      </GlowCard>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {features.map((f, i) => {
           const Icon = f.icon
           return (
-            <div key={i} className="border-vercel bg-background rounded-xl p-8 group">
-              <div className="w-10 h-10 border border-accents-2 rounded bg-accents-1 flex items-center justify-center mb-6 text-foreground group-hover:bg-foreground group-hover:text-background transition-colors">
-                <Icon className="w-5 h-5" />
+            <GlowCard key={i} className="group/feat">
+              <div className="p-8">
+                <div className="w-10 h-10 border border-accents-2 rounded bg-accents-1 flex items-center justify-center mb-6 text-foreground group-hover/feat:bg-foreground group-hover/feat:text-background transition-colors">
+                  <Icon className="w-5 h-5" />
+                </div>
+                <h3 className="font-semibold text-lg tracking-tight text-foreground mb-3">{f.title}</h3>
+                <p className="text-accents-5 text-sm leading-relaxed">{f.desc}</p>
               </div>
-              <h3 className="font-semibold text-lg tracking-tight text-foreground mb-3">{f.title}</h3>
-              <p className="text-accents-5 text-sm leading-relaxed">{f.desc}</p>
-            </div>
+            </GlowCard>
           )
         })}
       </div>

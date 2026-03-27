@@ -1,4 +1,5 @@
 import { ExternalLink, CheckCircle2, Phone, MessageCircle } from 'lucide-react'
+import GlowCard from '../components/GlowCard'
 
 export default function Home() {
   const services = [
@@ -28,7 +29,8 @@ export default function Home() {
     <div className="animate-in fade-in duration-500">
       
       {/* Hero Section */}
-      <div className="border-vercel rounded-xl p-8 sm:p-12 mb-16 bg-accents-1/30">
+      <GlowCard className="mb-16">
+        <div className="p-8 sm:p-12">
         <div className="max-w-3xl">
           <h1 className="font-display font-extrabold tracking-tight text-5xl sm:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6">
             Imprenta y encuadernación profesional
@@ -63,7 +65,8 @@ export default function Home() {
             <span>Lu a Vi 10:30 a 19:00 Hs</span>
           </div>
         </div>
-      </div>
+        </div>
+      </GlowCard>
 
       {/* Services Grid */}
       <div className="mb-20">
@@ -71,9 +74,14 @@ export default function Home() {
           Nuestros Servicios
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 group/grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, i) => (
-            <ServiceCard key={i} service={service} />
+            <GlowCard key={i} className="group/card">
+              <div className="flex items-start gap-4 p-5 h-full">
+                <CheckCircle2 className="w-5 h-5 text-accents-4 shrink-0 mt-0.5 group-hover/card:text-foreground transition-colors" />
+                <span className="text-sm font-medium text-accents-5 group-hover/card:text-foreground transition-colors leading-relaxed">{service}</span>
+              </div>
+            </GlowCard>
           ))}
         </div>
       </div>
@@ -94,33 +102,3 @@ export default function Home() {
   )
 }
 
-function ServiceCard({ service }) {
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect()
-    const x = e.clientX - rect.left
-    const y = e.clientY - rect.top
-    e.currentTarget.style.setProperty('--mouse-x', `${x}px`)
-    e.currentTarget.style.setProperty('--mouse-y', `${y}px`)
-  }
-
-  return (
-    <div 
-      onMouseMove={handleMouseMove}
-      className="relative rounded-lg p-[1px] bg-accents-2 overflow-hidden group/card"
-    >
-      {/* Dynamic Border Glow */}
-      <div 
-        className="pointer-events-none absolute -inset-px opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 z-0"
-        style={{
-          background: `radial-gradient(300px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.5), transparent 40%)`
-        }}
-      />
-      
-      {/* Inner solid content */}
-      <div className="relative z-10 flex items-start gap-4 p-5 h-full rounded-[7px] bg-background">
-        <CheckCircle2 className="w-5 h-5 text-accents-4 shrink-0 mt-0.5 group-hover/card:text-foreground transition-colors" />
-        <span className="text-sm font-medium text-accents-5 group-hover/card:text-foreground transition-colors leading-relaxed">{service}</span>
-      </div>
-    </div>
-  )
-}

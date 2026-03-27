@@ -1,4 +1,5 @@
 import { ExternalLink, Landmark, FileText, Globe } from 'lucide-react'
+import GlowCard from '../components/GlowCard'
 
 const links = [
   {
@@ -40,28 +41,24 @@ export default function OtrosLinks() {
         {links.map((link, i) => {
           const Icon = link.icon
           return (
-            <a 
-              key={i} 
-              href={link.url} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-background p-6 rounded-lg border-vercel flex flex-col group"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="w-10 h-10 border border-accents-2 bg-accents-1 text-foreground rounded flex items-center justify-center shrink-0 group-hover:bg-foreground group-hover:text-background transition-colors">
-                  <Icon className="w-5 h-5" />
+            <GlowCard key={i} as="a" href={link.url} target="_blank" rel="noopener noreferrer" className="block group/link">
+              <div className="flex flex-col p-6 h-full">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 border border-accents-2 bg-accents-1 text-foreground rounded flex items-center justify-center shrink-0 group-hover/link:bg-foreground group-hover/link:text-background transition-colors">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <ExternalLink className="w-4 h-4 text-accents-3 group-hover/link:text-foreground transition-colors" />
                 </div>
-                <ExternalLink className="w-4 h-4 text-accents-3 group-hover:text-foreground transition-colors" />
+                
+                <h3 className="font-semibold text-foreground mb-2 group-hover/link:underline decoration-accents-3 underline-offset-4">
+                  {link.title}
+                </h3>
+                
+                <p className="text-accents-5 text-sm leading-relaxed mt-auto">
+                  {link.desc}
+                </p>
               </div>
-              
-              <h3 className="font-semibold text-foreground mb-2 group-hover:underline decoration-accents-3 underline-offset-4">
-                {link.title}
-              </h3>
-              
-              <p className="text-accents-5 text-sm leading-relaxed mt-auto">
-                {link.desc}
-              </p>
-            </a>
+            </GlowCard>
           )
         })}
       </div>
