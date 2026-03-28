@@ -24,6 +24,7 @@ export default {
         brand: {
           primary: "#ffffff",
           accent: "#3b82f6", // Bright Blue (Blue 500)
+          whatsapp: "#10b981", // Emerald for WhatsApp
           danger: "#ef4444", // Red for Presupuesto
         }
       }

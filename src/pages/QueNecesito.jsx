@@ -1,4 +1,4 @@
-import { FileQuestion, AlertTriangle, PlayCircle } from 'lucide-react'
+import { FileQuestion, AlertTriangle, PlayCircle, MessageCircle } from 'lucide-react'
 import GlowCard from '../components/GlowCard'
 
 export default function QueNecesito() {
@@ -51,11 +51,11 @@ export default function QueNecesito() {
           <GlowCard className="mt-8">
             <div className="p-6">
               <div className="flex flex-col sm:flex-row gap-5 items-start">
-                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded border border-yellow-500/30 bg-yellow-500/10 text-yellow-500">
+                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded border border-accents-3 bg-accents-2 text-foreground">
                   <AlertTriangle className="w-5 h-5" />
                 </div>
                 <div>
-                  <strong className="block text-foreground mb-2">¿Es la primera vez que hacés facturas?</strong>
+                  <strong className="block text-white text-lg font-semibold tracking-tight mb-2">¿Es la primera vez que hacés facturas?</strong>
                   <p className="text-accents-5 leading-relaxed text-sm mb-5">
                     Necesitás descargar dos aplicativos desde la página de AFIP usando tu CUIT y Clave Fiscal:
                   </p>
@@ -71,7 +71,7 @@ export default function QueNecesito() {
                         <PlayCircle className="w-4 h-4 flex-shrink-0 text-foreground mt-0.5" />
                         <span className="text-sm text-accents-5">
                           <strong className="text-foreground font-medium">2.</strong> Autorización de Impresión de Comprobantes.
-                          <span className="block mt-1 text-xs text-brand-danger">Atención: tenés 10 días corridos para validar el trabajo, o la autorización se anula.</span>
+                          <span className="block mt-1 text-xs text-amber-500 tracking-wide uppercase font-semibold">Importante: tenés 10 días para validar el trabajo</span>
                         </span>
                       </div>
                     </GlowCard>
@@ -97,8 +97,9 @@ export default function QueNecesito() {
                 href="https://wa.me/5491149543444" 
                 target="_blank" 
                 rel="noreferrer"
-                className="w-full text-center py-2.5 bg-foreground hover:bg-gray-200 text-background rounded-md text-sm font-semibold transition-colors"
+                className="flex items-center justify-center gap-2 w-full py-2.5 bg-transparent hover:bg-accents-2 text-foreground rounded-md text-sm font-semibold transition-colors border border-accents-2 group"
               >
+                <MessageCircle className="w-4 h-4 text-[#25D366]" />
                 Consultar por WhatsApp
               </a>
             </div>

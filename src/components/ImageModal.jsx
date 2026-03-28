@@ -88,7 +88,7 @@ export default function ImageModal({ isOpen, onClose, image, title, subtitle }) 
 
             <GlowCard>
               <div className="p-6 flex items-center gap-4">
-                <div className="w-2 h-2 rounded-full bg-brand-accent animate-pulse flex-shrink-0" />
+                <div className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse flex-shrink-0" />
                 <div>
                   <p className="text-sm text-accents-5">Atención rápida por WhatsApp</p>
                   <p className="text-foreground font-semibold mt-0.5">011 4954-3444</p>

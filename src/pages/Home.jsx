@@ -87,9 +87,9 @@ export default function Home() {
               href="https://wa.me/5491149543444" 
               target="_blank" 
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent hover:bg-accents-2 text-foreground rounded-md font-medium transition-colors border border-accents-2"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent hover:bg-accents-2 text-foreground rounded-md font-medium transition-colors border border-accents-2 group"
             >
-              <MessageCircle className="w-4 h-4 text-brand-accent group-hover:text-brand-accent" />
+              <MessageCircle className="w-4 h-4 text-[#25D366]" />
               WhatsApp
             </a>
           </div>
