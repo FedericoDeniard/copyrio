@@ -170,9 +170,12 @@ export default function Layout({ children }) {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-accents-2 py-8">
+      <footer className="border-t border-accents-2 py-8 flex flex-col items-center justify-center gap-3">
         <p className="text-center text-xs text-accents-4">
           © {new Date().getFullYear()} Copyrio · Av. Corrientes 2330, Piso 9°, Of. 904 – C.A.B.A.
+        </p>
+        <p className="text-center text-[11px] text-accents-4">
+          Diseñado y desarrollado por <a href="https://www.linkedin.com/in/federicodeniard/" target="_blank" rel="noreferrer" className="text-foreground hover:underline decoration-accents-4 underline-offset-4 transition-colors font-medium">Federico Deniard</a>
         </p>
       </footer>
     </div>
