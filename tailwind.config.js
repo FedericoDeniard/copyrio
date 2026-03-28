@@ -22,8 +22,8 @@ export default {
           5: "#888888",
         },
         brand: {
-          primary: "#ffffff", // Vercel is mostly BW
-          accent: "#10b981", // Emerald for WhatsApp
+          primary: "#ffffff",
+          accent: "#3b82f6", // Bright Blue (Blue 500)
           danger: "#ef4444", // Red for Presupuesto
         }
       }

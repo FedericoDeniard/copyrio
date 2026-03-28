@@ -33,7 +33,7 @@ export default function OtrosLinks() {
     <div className="animate-in fade-in duration-500">
       
       <div className="mb-12">
-        <h1 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-foreground mb-4">Links Útiles</h1>
+        <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">Links Útiles</h1>
         <p className="text-lg text-accents-5 font-light tracking-wide">Recursos y organismos gubernamentales para gestiones fiscales</p>
       </div>
 

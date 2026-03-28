@@ -24,7 +24,7 @@ export default function QuienesSomos() {
     <div className="animate-in fade-in duration-500">
       
       <div className="mb-12">
-        <h1 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-foreground mb-4">Quiénes Somos</h1>
+        <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">Quiénes Somos</h1>
         <p className="text-lg text-accents-5 font-light tracking-wide">Más de 46 años en el mercado de la gráfica</p>
       </div>
 

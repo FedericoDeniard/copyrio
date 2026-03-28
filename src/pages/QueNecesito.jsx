@@ -25,7 +25,7 @@ export default function QueNecesito() {
     <div className="animate-in fade-in duration-500">
       
       <div className="mb-12">
-        <h1 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-foreground mb-4">¿Qué necesito para hacer Facturas?</h1>
+        <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">¿Qué necesito para hacer Facturas?</h1>
         <p className="text-lg text-accents-5 font-light tracking-wide">Requisitos legales para encargar facturación (A · B · C · E · M)</p>
       </div>
 

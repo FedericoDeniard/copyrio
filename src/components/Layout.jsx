@@ -69,9 +69,6 @@ export default function Layout({ children }) {
         }}
       />
 
-      {/* Bottom Fade Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/90 pointer-events-none z-0" />
-
       {/* ─── Top Navbar ─── */}
       <header className={`
         fixed top-0 left-0 right-0 z-50 transition-all duration-300
@@ -79,7 +76,7 @@ export default function Layout({ children }) {
           ? 'bg-background/80 backdrop-blur-xl border-b border-accents-2 shadow-[0_1px_3px_rgba(0,0,0,0.4)]'
           : 'bg-transparent border-b border-transparent'}
       `}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
 
             {/* Logo */}
@@ -167,7 +164,7 @@ export default function Layout({ children }) {
 
       {/* Main Content Area */}
       <main className="min-h-screen pt-16 pb-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-8">
           {children}
         </div>
       </main>

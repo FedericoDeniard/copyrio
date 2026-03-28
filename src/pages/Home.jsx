@@ -67,8 +67,8 @@ export default function Home() {
       {/* Hero Section */}
       <GlowCard className="mb-16">
         <div className="p-8 sm:p-12">
-        <div className="max-w-3xl">
-          <h1 className="font-display font-semibold tracking-tight text-5xl sm:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6">
+        <div className="max-w-4xl">
+          <h1 className="font-display font-semibold tracking-tight text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.1] mb-6">
             Imprenta y encuadernación profesional
           </h1>
           <p className="text-xl text-accents-5 mb-10 max-w-2xl leading-relaxed font-light tracking-wide">
@@ -107,7 +107,7 @@ export default function Home() {
       {/* Product Categories */}
       <div id="productos" className="mb-20 scroll-mt-24">
         <div className="mb-12">
-          <h2 className="font-display tracking-tight text-3xl font-bold text-foreground mb-4">
+          <h2 className="font-display tracking-tight text-3xl font-bold text-white mb-4">
             Nuestros Productos
           </h2>
           <p className="text-accents-5 text-lg max-w-2xl font-light">
@@ -122,7 +122,7 @@ export default function Home() {
 
       {/* Services Grid */}
       <div className="mb-20">
-        <h2 className="font-display tracking-tight text-2xl font-semibold text-foreground mb-8">
+        <h2 className="font-display tracking-tight text-2xl font-semibold text-white mb-8">
           Nuestros Servicios
         </h2>
         
@@ -140,7 +140,7 @@ export default function Home() {
 
       {/* Brands */}
       <div className="border-t border-accents-2 pt-16">
-        <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-accents-4 mb-8">Equipamiento tecnológico</h3>
+        <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-foreground mb-8">Equipamiento tecnológico</h3>
         <div className="inline-flex items-center justify-center p-8 rounded-lg border border-accents-2 bg-accents-1/20 transition-colors hover:border-accents-3">
           <img 
             src="/imagenes/marcas.gif" 
