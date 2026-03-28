@@ -1,5 +1,6 @@
 import { ExternalLink, CheckCircle2, Phone, MessageCircle } from 'lucide-react'
 import GlowCard from '../components/GlowCard'
+import ProductCarousel from '../components/ProductCarousel'
 
 export default function Home() {
   const services = [
@@ -25,6 +26,41 @@ export default function Home() {
     'Sellos en Polímero',
   ]
 
+  const productGroups = [
+    {
+      title: "Documentos Comerciales",
+      items: [
+        { title: "Facturas", subtitle: '"A" · "B" · "C" · "E" · "M"', image: "/imagenes/facturas.jpg" },
+        { title: "Recibos", subtitle: 'Muestras de Recibos "A" · "B" · "C" · "X"', image: "/imagenes/recibos.jpg" },
+        { title: "Remitos", subtitle: "Muestras de Remitos", image: "/imagenes/remitos.jpg" }
+      ]
+    },
+    {
+      title: "Impresión y Encuadernación",
+      items: [
+        { title: "Encuadernación", subtitle: "Encuadernación artesanal de libros y fascículos", image: "/imagenes/encuadernacion.jpg" },
+        { title: "Volantes", subtitle: "Volantes y folletos publicitarios", image: "/imagenes/volantes.jpg" }
+      ]
+    },
+    {
+      title: "Merchandising y Publicidad",
+      items: [
+        { title: "Botones Publicitarios", subtitle: "Botones personalizados para publicidad y eventos", image: "/imagenes/botones-publicitarios.jpg" },
+        { title: "Remeras Publicitarias", subtitle: "Personalización de remeras para publicidad", image: "/imagenes/remera.jpg" },
+        { title: "Carteles Inmobiliarias", subtitle: "Carteles personalizados para inmobiliarias", image: "/imagenes/cartelesinmobiliarias.jpg" }
+      ]
+    },
+    {
+      title: "Tarjetería Social y Corporativa",
+      items: [
+        { title: "Tarjetas Blanco y Negro", subtitle: "Tarjetas personales en blanco y negro láser", image: "/imagenes/tarjetas-blanco-y-negro.jpg" },
+        { title: "Tarjetas Full Color", subtitle: "Tarjetas personales a todo color · Láser", image: "/imagenes/muestras-tarjetas-pagina.jpg" },
+        { title: "Estampas de Comunión", subtitle: "Estampas personalizadas para primera comunión", image: "/imagenes/comunion.jpg" },
+        { title: "Bautismo", subtitle: "Recordatorios y tarjetas de bautismo", image: "/imagenes/bautismo.jpg" }
+      ]
+    }
+  ];
+
   return (
     <div className="animate-in fade-in duration-500">
       
@@ -32,7 +68,7 @@ export default function Home() {
       <GlowCard className="mb-16">
         <div className="p-8 sm:p-12">
         <div className="max-w-3xl">
-          <h1 className="font-display font-extrabold tracking-tight text-5xl sm:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6">
+          <h1 className="font-display font-semibold tracking-tight text-5xl sm:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6">
             Imprenta y encuadernación profesional
           </h1>
           <p className="text-xl text-accents-5 mb-10 max-w-2xl leading-relaxed font-light tracking-wide">
@@ -67,6 +103,22 @@ export default function Home() {
         </div>
         </div>
       </GlowCard>
+
+      {/* Product Categories */}
+      <div id="productos" className="mb-20 scroll-mt-24">
+        <div className="mb-12">
+          <h2 className="font-display tracking-tight text-3xl font-bold text-foreground mb-4">
+            Nuestros Productos
+          </h2>
+          <p className="text-accents-5 text-lg max-w-2xl font-light">
+            Explorá nuestra variedad de productos diseñados para cada necesidad, desde opciones comerciales y publicitarias hasta invitaciones personalizadas.
+          </p>
+        </div>
+        
+        {productGroups.map((group, idx) => (
+          <ProductCarousel key={idx} title={group.title} items={group.items} />
+        ))}
+      </div>
 
       {/* Services Grid */}
       <div className="mb-20">
