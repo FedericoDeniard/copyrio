@@ -47,17 +47,14 @@ export default function Home() {
       title: "Merchandising y Publicidad",
       items: [
         { title: "Botones Publicitarios", subtitle: "Botones personalizados para publicidad y eventos", image: "/imagenes/botones-publicitarios.jpg" },
-        { title: "Remeras Publicitarias", subtitle: "Personalización de remeras para publicidad", image: "/imagenes/remera.jpg" },
-        { title: "Carteles Inmobiliarias", subtitle: "Carteles personalizados para inmobiliarias", image: "/imagenes/cartelesinmobiliarias.jpg" }
+        { title: "Remeras Publicitarias", subtitle: "Personalización de remeras para publicidad", image: "/imagenes/remera.jpg" }
       ]
     },
     {
       title: "Tarjetería Social y Corporativa",
       items: [
         { title: "Tarjetas Blanco y Negro", subtitle: "Tarjetas personales en blanco y negro láser", image: "/imagenes/tarjetas-blanco-y-negro.jpg" },
-        { title: "Tarjetas Full Color", subtitle: "Tarjetas personales a todo color · Láser", image: "/imagenes/muestras-tarjetas-pagina.jpg" },
-        { title: "Estampas de Comunión", subtitle: "Estampas personalizadas para primera comunión", image: "/imagenes/comunion.jpg" },
-        { title: "Bautismo", subtitle: "Recordatorios y tarjetas de bautismo", image: "/imagenes/bautismo.jpg" }
+        { title: "Tarjetas Full Color", subtitle: "Tarjetas personales a todo color · Láser", image: "/imagenes/muestras-tarjetas-pagina.jpg" }
       ]
     }
   ];
