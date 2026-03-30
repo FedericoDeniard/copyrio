@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Mail, Menu, X } from 'lucide-react'
+import { CONTACT_EMAIL } from '../config/constants'
 
 const navItems = [
   { id: 'inicio', label: 'Inicio' },
@@ -110,7 +111,7 @@ export default function Layout({ children }) {
             {/* Desktop CTA */}
             <div className="hidden md:flex items-center gap-3">
               <a
-                href="mailto:copyrio@copyrio.ar?subject=Presupuesto"
+                href={`mailto:${CONTACT_EMAIL}?subject=Presupuesto`}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-foreground hover:bg-gray-200 text-background rounded-md text-sm font-semibold transition-colors"
               >
                 <Mail className="w-3.5 h-3.5" />
@@ -151,7 +152,7 @@ export default function Layout({ children }) {
             ))}
             <div className="pt-3 border-t border-accents-2 mt-3">
               <a
-                href="mailto:copyrio@copyrio.ar?subject=Presupuesto"
+                href={`mailto:${CONTACT_EMAIL}?subject=Presupuesto`}
                 className="flex items-center justify-center gap-2 w-full py-2.5 bg-foreground hover:bg-gray-200 text-background rounded-md text-sm font-semibold transition-colors"
               >
                 <Mail className="w-4 h-4" />

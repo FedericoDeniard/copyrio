@@ -1,6 +1,7 @@
 import { ExternalLink, CheckCircle2, Phone, MessageCircle } from 'lucide-react'
 import GlowCard from '../components/GlowCard'
 import ProductCarousel from '../components/ProductCarousel'
+import { CONTACT_EMAIL } from '../config/constants'
 
 export default function Home() {
   const services = [
@@ -77,7 +78,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <a 
-              href="mailto:copyrio@copyrio.ar?subject=Presupuesto"
+              href={`mailto:${CONTACT_EMAIL}?subject=Presupuesto`}
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground hover:bg-gray-200 text-background rounded-md font-semibold transition-colors"
             >
               Consultar Presupuesto

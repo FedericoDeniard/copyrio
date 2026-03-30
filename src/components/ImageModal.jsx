@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { X, Mail, Receipt } from 'lucide-react'
+import { CONTACT_EMAIL } from '../config/constants'
 import GlowCard from './GlowCard'
 
 export default function ImageModal({ isOpen, onClose, image, title, subtitle }) {
@@ -77,7 +78,7 @@ export default function ImageModal({ isOpen, onClose, image, title, subtitle }) 
                   Solicitá cantidades mínimas y tiempos de entrega exactos a través de nuestro formulario de cotización.
                 </p>
                 <a
-                  href={`mailto:copyrio@copyrio.ar?subject=Presupuesto%20-%20${encodeURIComponent(title)}`}
+                  href={`mailto:${CONTACT_EMAIL}?subject=Presupuesto%20-%20${encodeURIComponent(title)}`}
                   className="flex items-center justify-center gap-2 w-full py-2.5 bg-foreground hover:bg-gray-200 text-background rounded-md text-sm font-semibold transition-colors"
                 >
                   <Mail className="w-4 h-4" />
