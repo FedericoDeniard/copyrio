@@ -139,12 +139,21 @@ export default function Home() {
       {/* Brands */}
       <div className="border-t border-accents-2 pt-16">
         <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-foreground mb-8">Equipamiento tecnológico</h3>
-        <div className="inline-flex items-center justify-center p-8 rounded-lg border border-accents-2 bg-accents-1/20 transition-colors hover:border-accents-3">
-          <img 
-            src="/imagenes/marcas.gif" 
-            alt="Marcas: Ricoh, Aficio, Minolta, Canon" 
-            className="h-10 object-contain filter invert opacity-60 hover:opacity-100 transition-opacity" 
-          />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-12 rounded-2xl border border-accents-2 bg-accents-1/10 backdrop-blur-sm transition-all hover:bg-accents-1/20 hover:border-accents-3">
+          {[
+            { src: "/imagenes/Ricoh_logo_2005.png", alt: "Ricoh", className: "h-6 sm:h-8" },
+            { src: "/imagenes/aficio.svg", alt: "Aficio", className: "h-16 sm:h-24" },
+            { src: "/imagenes/Logo_Konica_Minolta.png", alt: "Konica Minolta", className: "h-14 sm:h-20" },
+            { src: "/imagenes/Canon_wordmark.png", alt: "Canon", className: "h-7 sm:h-9" }
+          ].map((brand) => (
+            <div key={brand.alt} className="flex items-center justify-center h-24">
+              <img 
+                src={brand.src} 
+                alt={brand.alt} 
+                className={`${brand.className} object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 transform hover:scale-110`} 
+              />
+            </div>
+          ))}
         </div>
       </div>
 
