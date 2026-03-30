@@ -85,7 +85,7 @@ export default function Layout({ children }) {
               <img
                 src="/imagenes/logo-copyrio.gif"
                 alt="Copyrio"
-                className="h-7 object-contain filter invert opacity-90 hover:opacity-100 transition-opacity"
+                className="h-9 object-contain filter invert opacity-90 hover:opacity-100 transition-opacity"
               />
             </a>
 
