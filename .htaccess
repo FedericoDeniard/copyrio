@@ -22,3 +22,36 @@ RewriteRule ^(.*)$ /dist/$1 [L]
 <FilesMatch "sw\.js$">
     Header set Cache-Control "public, max-age=0, must-revalidate"
 </FilesMatch>
+
+# ─── Security headers ────────────────────────────────────────────────────────────
+# HSTS: 1 year, include subdomains, eligible for preload. Requires HTTPS.
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+# Prevent MIME-type sniffing.
+Header always set X-Content-Type-Options "nosniff"
+
+# Referrer policy: send only the origin on cross-origin requests.
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Cross-Origin-Opener-Policy: isolate the browsing context.
+Header always set Cross-Origin-Opener-Policy "same-origin"
+
+# Disable powerful features we don't use to shrink the attack surface.
+Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+
+# Content Security Policy. Mirrors what the app actually loads:
+#  - default-src 'self'                                (only same-origin by default)
+#  - script-src 'self' + cloudflare beacon + 'unsafe-inline'
+#    (the inline <script> in <head> sets media='all' on the Google Fonts CSS)
+#  - style-src  'self' + Google Fonts + 'unsafe-inline'
+#    (Tailwind v4 + a small <style> block in index.html use inline styles)
+#  - font-src   'self' + Google Fonts gstatic
+#  - img-src    'self' data:
+#  - connect-src 'self' + Cloudflare beacon endpoint (browser sends beacons via fetch)
+#  - frame-ancestors 'none'                            (replaces X-Frame-Options DENY)
+#  - form-action 'self' mailto:                        (contact form uses mailto:)
+#  - base-uri   'self'
+#  - object-src 'none'
+#  - upgrade-insecure-requests                        (force https on mixed content)
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://static.cloudflareinsights.com; frame-ancestors 'none'; form-action 'self' mailto:; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+

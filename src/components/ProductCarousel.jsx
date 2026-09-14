@@ -72,8 +72,12 @@ export default function ProductCarousel({ title, items }) {
                 <picture>
                   <source
                     type="image/webp"
-                    srcSet={`${item.image.replace(/\.(jpe?g|png)$/i, '')}-640.webp 640w, ${item.image.replace(/\.(jpe?g|png)$/i, '')}-1024.webp 1024w`}
-                    sizes="(max-width: 640px) 320px, 640px"
+                    srcSet={[
+                      `${item.image.replace(/\.(jpe?g|png)$/i, '')}-480.webp 480w`,
+                      `${item.image.replace(/\.(jpe?g|png)$/i, '')}-640.webp 640w`,
+                      `${item.image.replace(/\.(jpe?g|png)$/i, '')}-1024.webp 1024w`,
+                    ].join(', ')}
+                    sizes="320px"
                   />
                   <img
                     src={item.image}
