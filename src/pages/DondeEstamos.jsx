@@ -25,7 +25,7 @@ export default function DondeEstamos() {
                 </h2>
                 <p className="text-accents-5 leading-relaxed text-sm">
                   Piso 3° · Oficina 16<br/>
-                  Entre Pasteur y Azcuénaga<br/>
+                  Entre Pasteur y Uriburu<br/>
                   C.A.B.A., Argentina
                 </p>
               </div>

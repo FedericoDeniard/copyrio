@@ -28,7 +28,7 @@ function App() {
             <span className="text-foreground font-medium">
               Av. Corrientes 2294, Piso 3°, Of. 16
             </span>{' '}
-            — Entre Pasteur y Azcuénaga, C.A.B.A.
+            — Entre Pasteur y Uriburu, C.A.B.A.
           </p>
         </div>
       ),
