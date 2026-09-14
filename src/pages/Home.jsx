@@ -141,15 +141,19 @@ export default function Home() {
         <h2 className="text-xs font-semibold tracking-[0.2em] uppercase text-foreground mb-8">Equipamiento tecnológico</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-12 rounded-2xl border border-accents-2 bg-accents-1/10 backdrop-blur-sm transition-all hover:bg-accents-1/20 hover:border-accents-3">
           {[
-            { webp: "/imagenes/Ricoh_logo_2005.webp", src: "/imagenes/Ricoh_logo_2005.png", alt: "Ricoh", w: 250, h: 45, className: "h-6 sm:h-8" },
+            { webp: "/imagenes/Ricoh_logo_2005", src: "/imagenes/Ricoh_logo_2005.png", alt: "Ricoh", w: 250, h: 45, className: "h-6 sm:h-8" },
             { src: "/imagenes/aficio.svg", alt: "Aficio", w: 200, h: 200, className: "h-16 sm:h-24" },
-            { webp: "/imagenes/Logo_Konica_Minolta.webp", src: "/imagenes/Logo_Konica_Minolta.png", alt: "Konica Minolta", w: 250, h: 145, className: "h-14 sm:h-20" },
-            { webp: "/imagenes/Canon_wordmark.webp", src: "/imagenes/Canon_wordmark.png", alt: "Canon", w: 250, h: 52, className: "h-7 sm:h-9" }
+            { webp: "/imagenes/Logo_Konica_Minolta", src: "/imagenes/Logo_Konica_Minolta.png", alt: "Konica Minolta", w: 250, h: 145, className: "h-14 sm:h-20" },
+            { webp: "/imagenes/Canon_wordmark", src: "/imagenes/Canon_wordmark.png", alt: "Canon", w: 250, h: 52, className: "h-7 sm:h-9" }
           ].map((brand) => (
             <div key={brand.alt} className="flex items-center justify-center h-24">
               {brand.webp ? (
                 <picture>
-                  <source type="image/webp" srcSet={brand.webp} />
+                  <source
+                    type="image/webp"
+                    srcSet={`${brand.webp}-400.webp 400w, ${brand.webp}.webp 800w`}
+                    sizes="(max-width: 640px) 125px, 250px"
+                  />
                   <img
                     src={brand.src}
                     alt={brand.alt}

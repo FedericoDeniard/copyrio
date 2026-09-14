@@ -70,7 +70,11 @@ export default function ProductCarousel({ title, items }) {
             <div className="flex flex-col h-full rounded-md overflow-hidden bg-background">
               <div className="aspect-[4/3] w-full relative overflow-hidden bg-accents-1 flex items-center justify-center p-4">
                 <picture>
-                  <source type="image/webp" srcSet={`${item.image.replace(/\.(jpe?g|png)$/i, '')}.webp`} />
+                  <source
+                    type="image/webp"
+                    srcSet={`${item.image.replace(/\.(jpe?g|png)$/i, '')}-640.webp 640w, ${item.image.replace(/\.(jpe?g|png)$/i, '')}-1024.webp 1024w`}
+                    sizes="(max-width: 640px) 320px, 640px"
+                  />
                   <img
                     src={item.image}
                     alt={item.title}
