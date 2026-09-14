@@ -5,3 +5,18 @@ RewriteEngine On
 # Serve everything from /dist (Vite build output)
 RewriteCond %{REQUEST_URI} !^/dist/
 RewriteRule ^(.*)$ /dist/$1 [L]
+
+# Long cache for fingerprinted Vite assets (immutable safe due to content hash)
+<FilesMatch "^.*\.[a-f0-9]{8}\.(js|css|woff2?|ttf|otf|eot|png|jpe?g|gif|webp|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# Images and fonts inside /dist/imagenes get a 7-day cache
+<FilesMatch "\.(png|jpe?g|gif|webp|svg|woff2?|ttf|otf|eot)$">
+    Header set Cache-Control "public, max-age=604800"
+</FilesMatch>
+
+# Service worker (future-proofing)
+<FilesMatch "sw\.js$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+</FilesMatch>

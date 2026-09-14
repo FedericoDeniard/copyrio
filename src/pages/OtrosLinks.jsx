@@ -50,9 +50,9 @@ export default function OtrosLinks() {
                   <ExternalLink className="w-4 h-4 text-accents-3 group-hover/link:text-foreground transition-colors" />
                 </div>
                 
-                <h3 className="font-semibold text-foreground mb-2 group-hover/link:underline decoration-accents-3 underline-offset-4">
+                <h2 className="font-semibold text-foreground mb-2 group-hover/link:underline decoration-accents-3 underline-offset-4">
                   {link.title}
-                </h3>
+                </h2>
                 
                 <p className="text-accents-5 text-sm leading-relaxed mt-auto">
                   {link.desc}

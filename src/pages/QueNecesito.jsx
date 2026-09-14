@@ -89,7 +89,7 @@ export default function QueNecesito() {
               <div className="w-10 h-10 border border-accents-2 rounded bg-accents-1 flex items-center justify-center mb-6">
                 <FileQuestion className="w-5 h-5 text-foreground" />
               </div>
-              <h3 className="font-semibold tracking-tight text-xl text-foreground mb-3">¿Tenés alguna duda?</h3>
+              <h2 className="font-semibold tracking-tight text-xl text-foreground mb-3">¿Tenés alguna duda?</h2>
               <p className="text-accents-5 text-sm leading-relaxed mb-8">
                 Los trámites gubernamentales pueden ser confusos. Si tenés dudas sobre qué comprobante necesitás o cómo hacer el trámite, comunicate con nosotros.
               </p>

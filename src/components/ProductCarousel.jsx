@@ -69,13 +69,19 @@ export default function ProductCarousel({ title, items }) {
           >
             <div className="flex flex-col h-full rounded-md overflow-hidden bg-background">
               <div className="aspect-[4/3] w-full relative overflow-hidden bg-accents-1 flex items-center justify-center p-4">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover rounded-sm filter brightness-90 group-hover/product:brightness-100 transition-all duration-300 group-hover/product:scale-105"
-                  loading="lazy"
-                />
-                
+                <picture>
+                  <source type="image/webp" srcSet={`${item.image.replace(/\.(jpe?g|png)$/i, '')}.webp`} />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    width="640"
+                    height="480"
+                    decoding="async"
+                    className="w-full h-full object-cover rounded-sm filter brightness-90 group-hover/product:brightness-100 transition-all duration-300 group-hover/product:scale-105"
+                    loading="lazy"
+                  />
+                </picture>
+
                 {/* Maximize Indicator Overlay */}
                 <div className="absolute inset-0 bg-background/20 opacity-0 group-hover/product:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
                   <div className="w-12 h-12 rounded-full bg-background/40 backdrop-blur-md border border-accents-2 flex items-center justify-center text-foreground transform scale-75 group-hover/product:scale-100 transition-transform">

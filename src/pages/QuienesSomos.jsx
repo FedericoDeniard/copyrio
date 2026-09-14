@@ -52,7 +52,7 @@ export default function QuienesSomos() {
                 <div className="w-10 h-10 border border-accents-2 rounded bg-accents-1 flex items-center justify-center mb-6 text-foreground group-hover/feat:bg-foreground group-hover/feat:text-background transition-colors">
                   <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-semibold text-lg tracking-tight text-foreground mb-3">{f.title}</h3>
+                <h2 className="font-semibold text-lg tracking-tight text-foreground mb-3">{f.title}</h2>
                 <p className="text-accents-5 text-sm leading-relaxed">{f.desc}</p>
               </div>
             </GlowCard>

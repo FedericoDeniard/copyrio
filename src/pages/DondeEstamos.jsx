@@ -20,9 +20,9 @@ export default function DondeEstamos() {
                 <Building2 className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-semibold tracking-tight text-xl text-foreground mb-2">
+                <h2 className="font-semibold tracking-tight text-xl text-foreground mb-2">
                   Av. Corrientes 2294
-                </h3>
+                </h2>
                 <p className="text-accents-5 leading-relaxed text-sm">
                   Piso 3° · Oficina 16<br/>
                   Entre Pasteur y Azcuénaga<br/>
@@ -38,9 +38,9 @@ export default function DondeEstamos() {
                 <MessagesSquare className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-semibold tracking-tight text-xl text-foreground mb-2">
+                <h2 className="font-semibold tracking-tight text-xl text-foreground mb-2">
                   Contacto
-                </h3>
+                </h2>
                 <p className="text-accents-5 leading-relaxed text-sm mb-2">
                   <span className="text-foreground font-medium">Tel./WhatsApp:</span> 011 4954-3444
                 </p>

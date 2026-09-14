@@ -138,20 +138,39 @@ export default function Home() {
 
       {/* Brands */}
       <div className="border-t border-accents-2 pt-16">
-        <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-foreground mb-8">Equipamiento tecnológico</h3>
+        <h2 className="text-xs font-semibold tracking-[0.2em] uppercase text-foreground mb-8">Equipamiento tecnológico</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-12 rounded-2xl border border-accents-2 bg-accents-1/10 backdrop-blur-sm transition-all hover:bg-accents-1/20 hover:border-accents-3">
           {[
-            { src: "/imagenes/Ricoh_logo_2005.png", alt: "Ricoh", className: "h-6 sm:h-8" },
-            { src: "/imagenes/aficio.svg", alt: "Aficio", className: "h-16 sm:h-24" },
-            { src: "/imagenes/Logo_Konica_Minolta.png", alt: "Konica Minolta", className: "h-14 sm:h-20" },
-            { src: "/imagenes/Canon_wordmark.png", alt: "Canon", className: "h-7 sm:h-9" }
+            { webp: "/imagenes/Ricoh_logo_2005.webp", src: "/imagenes/Ricoh_logo_2005.png", alt: "Ricoh", w: 250, h: 45, className: "h-6 sm:h-8" },
+            { src: "/imagenes/aficio.svg", alt: "Aficio", w: 200, h: 200, className: "h-16 sm:h-24" },
+            { webp: "/imagenes/Logo_Konica_Minolta.webp", src: "/imagenes/Logo_Konica_Minolta.png", alt: "Konica Minolta", w: 250, h: 145, className: "h-14 sm:h-20" },
+            { webp: "/imagenes/Canon_wordmark.webp", src: "/imagenes/Canon_wordmark.png", alt: "Canon", w: 250, h: 52, className: "h-7 sm:h-9" }
           ].map((brand) => (
             <div key={brand.alt} className="flex items-center justify-center h-24">
-              <img 
-                src={brand.src} 
-                alt={brand.alt} 
-                className={`${brand.className} object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 transform hover:scale-110`} 
-              />
+              {brand.webp ? (
+                <picture>
+                  <source type="image/webp" srcSet={brand.webp} />
+                  <img
+                    src={brand.src}
+                    alt={brand.alt}
+                    width={brand.w}
+                    height={brand.h}
+                    loading="lazy"
+                    decoding="async"
+                    className={`${brand.className} object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 transform hover:scale-110`}
+                  />
+                </picture>
+              ) : (
+                <img
+                  src={brand.src}
+                  alt={brand.alt}
+                  width={brand.w}
+                  height={brand.h}
+                  loading="lazy"
+                  decoding="async"
+                  className={`${brand.className} object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 transform hover:scale-110`}
+                />
+              )}
             </div>
           ))}
         </div>

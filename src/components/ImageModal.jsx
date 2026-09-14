@@ -40,9 +40,9 @@ export default function ImageModal({ isOpen, onClose, image, title, subtitle }) 
       >
         {/* Header */}
         <div className="mb-12">
-          <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+          <h2 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
             {title}
-          </h1>
+          </h2>
           {subtitle && (
             <p className="text-lg text-accents-5 font-light tracking-wide">
               {subtitle}
@@ -57,11 +57,17 @@ export default function ImageModal({ isOpen, onClose, image, title, subtitle }) 
           <div className="lg:col-span-8">
             <GlowCard>
               <div className="relative overflow-hidden rounded-[7px] bg-black flex justify-center items-center min-h-[400px]">
-                <img 
-                  src={image} 
-                  alt={title} 
-                  className="max-h-[600px] w-auto object-contain p-4"
-                />
+                <picture>
+                  <source type="image/webp" srcSet={image.replace(/\.(jpe?g|png)$/i, '.webp')} />
+                  <img
+                    src={image}
+                    alt={title}
+                    width="1920"
+                    height="1440"
+                    decoding="async"
+                    className="max-h-[600px] w-auto object-contain p-4"
+                  />
+                </picture>
               </div>
             </GlowCard>
           </div>

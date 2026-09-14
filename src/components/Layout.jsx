@@ -82,11 +82,16 @@ export default function Layout({ children }) {
 
             {/* Logo */}
             <a href="#inicio" onClick={(e) => handleNavClick(e, 'inicio')} className="flex items-center shrink-0">
-              <img
-                src="/imagenes/logo-copyrio.gif"
-                alt="Copyrio"
-                className="h-9 object-contain filter invert opacity-90 hover:opacity-100 transition-opacity"
-              />
+              <picture>
+                <source type="image/webp" srcSet="/imagenes/logo-copyrio.webp" />
+                <img
+                  src="/imagenes/logo-copyrio.gif"
+                  alt="Copyrio"
+                  width="260"
+                  height="72"
+                  className="h-9 object-contain filter invert opacity-90 hover:opacity-100 transition-opacity"
+                />
+              </picture>
             </a>
 
             {/* Desktop Nav Links */}
@@ -121,7 +126,11 @@ export default function Layout({ children }) {
 
             {/* Mobile Hamburger */}
             <button
+              type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
               className="md:hidden p-2 rounded-md text-accents-5 hover:text-foreground transition-colors"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -130,10 +139,13 @@ export default function Layout({ children }) {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`
+        <div
+          id="mobile-menu"
+          className={`
           md:hidden overflow-hidden transition-all duration-300 ease-in-out
           ${mobileMenuOpen ? 'max-h-[400px] border-t border-accents-2' : 'max-h-0'}
-        `}>
+        `}
+        >
           <div className="bg-background/95 backdrop-blur-xl px-4 py-4 space-y-1">
             {navItems.map((item) => (
               <a
