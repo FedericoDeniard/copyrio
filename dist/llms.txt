@@ -1,0 +1,45 @@
+# Copyrio
+
+> Imprenta y encuadernación profesional en Buenos Aires, Argentina.
+
+Copyrio es una empresa con más de 46 años en el mercado de la gráfica y encuadernación. Ofrece servicios de impresión comercial, fiscal, papelería corporativa, merchandising publicitario y encuadernación artesanal, con equipos láser digitales de última generación.
+
+## Secciones
+
+- [Inicio](https://copyrio.com.ar/#inicio): Presentación, horarios y datos de contacto.
+- [Productos](https://copyrio.com.ar/#productos): Documentos comerciales, impresión, merchandising y tarjetería.
+- [Quiénes Somos](https://copyrio.com.ar/#quienes-somos): Trayectoria, cumplimiento y equipamiento.
+- [Dónde Estamos](https://copyrio.com.ar/#donde-estamos): Ubicación en Av. Corrientes 2294, CABA.
+- [¿Qué necesito?](https://copyrio.com.ar/#que-necesito): Requisitos legales para imprimir comprobantes fiscales (AFIP).
+- [Links Útiles](https://copyrio.com.ar/#otros-links): Organismos gubernamentales y portales oficiales.
+
+## Productos
+
+- [Facturas A · B · C · E · M](https://copyrio.com.ar/imagenes/facturas.webp): Comprobantes fiscales en formulario continuo.
+- [Recibos A · B · C · E · M · X](https://copyrio.com.ar/imagenes/recibos.webp): Recibos fiscales y no fiscales.
+- [Remitos R · X](https://copyrio.com.ar/imagenes/remitos.webp): Documentos de traslado de mercaderías.
+- [Encuadernación artesanal](https://copyrio.com.ar/imagenes/encuadernacion.webp): Libros, fascículos y trabajos a medida.
+- [Volantes y folletos](https://copyrio.com.ar/imagenes/volantes.webp): Publicitarios en B/N y full color.
+- [Botones publicitarios](https://copyrio.com.ar/imagenes/botones-publicitarios.webp): Pins personalizados para eventos.
+- [Remeras publicitarias](https://copyrio.com.ar/imagenes/remera.webp): Personalización textil.
+- [Tarjetas personales](https://copyrio.com.ar/imagenes/tarjetas-blanco-y-negro.webp): Láser B/N y full color.
+
+## Contacto
+
+- Email: [copyrio@copyrio.com.ar](mailto:copyrio@copyrio.com.ar)
+- WhatsApp: [+54 9 11 4954-3444](https://wa.me/5491149543444)
+- Teléfono: 011 4954-3444
+- Dirección: Av. Corrientes 2294, Piso 3°, Oficina 16 – C.A.B.A., Argentina
+- Horario: Lunes a Viernes de 10:30 a 19:00 Hs.
+
+## Recursos oficiales
+
+- [AFIP – Portal de contribuyentes](https://auth.afip.gob.ar/contribuyente_/login.xhtml): Acceso con Clave Fiscal.
+- [Constancia de Inscripción – CUIT](https://seti.afip.gob.ar/padron-puc-constancia-internet/jsp/Constancia.jsp): Consulta e impresión oficial.
+- [AGIP – Rentas CABA](https://www.agip.gob.ar/): Trámipositivos de la Ciudad de Buenos Aires.
+- [Constancia de Ingresos Brutos (CABA)](https://lb.agip.gob.ar/ConstanciaIB/): Descarga de constancia online.
+
+## Optional
+
+- [Sitio web](https://copyrio.com.ar/): Página principal de Copyrio.
+- [LinkedIn](https://www.linkedin.com/in/federicodeniard/): Desarrollador del sitio.
