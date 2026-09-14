@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://copyrio.com.ar/sitemap.xml
