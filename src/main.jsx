@@ -7,6 +7,6 @@ import App from './App.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <Toaster theme="dark" position="bottom-right" richColors closeButton />
+    <Toaster theme="dark" position="bottom-right" />
   </StrictMode>,
 )
