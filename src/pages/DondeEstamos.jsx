@@ -21,10 +21,10 @@ export default function DondeEstamos() {
               </div>
               <div>
                 <h3 className="font-semibold tracking-tight text-xl text-foreground mb-2">
-                  Av. Corrientes 2330
+                  Av. Corrientes 2294
                 </h3>
                 <p className="text-accents-5 leading-relaxed text-sm">
-                  Piso 9° · Oficina 904<br/>
+                  Piso 3° · Oficina 16<br/>
                   Entre Pasteur y Azcuénaga<br/>
                   C.A.B.A., Argentina
                 </p>
@@ -58,7 +58,7 @@ export default function DondeEstamos() {
             <div className="absolute inset-0 bg-background/20 group-hover/map:bg-transparent pointer-events-none transition-colors duration-500 z-10" />
             <iframe
               title="Ubicación Copyrio"
-              src="https://maps.google.com/maps?q=Av.+Corrientes+2330,+Buenos+Aires,+Argentina&output=embed"
+              src="https://maps.google.com/maps?q=Av.+Corrientes+2294,+Buenos+Aires,+Argentina&output=embed"
               className="w-full h-full absolute inset-0 filter grayscale opacity-80 group-hover/map:grayscale-0 group-hover/map:opacity-100 transition-all duration-700"
               allowFullScreen
               loading="lazy"
