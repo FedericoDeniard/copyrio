@@ -24,6 +24,10 @@
   :root {
     --background: #000000;
     --foreground: #ffffff;
+
+    --normal-bg: var(--color-accents-1);
+    --normal-text: var(--color-foreground);
+    --normal-border: var(--color-accents-2);
   }
 
   body {

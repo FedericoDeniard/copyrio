@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { toast } from 'sonner'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import QuienesSomos from './pages/QuienesSomos'
@@ -6,6 +8,13 @@ import QueNecesito from './pages/QueNecesito'
 import OtrosLinks from './pages/OtrosLinks'
 
 function App() {
+  useEffect(() => {
+    toast('Nos mudamos! Nueva dirección: Av. Corrientes 2294, Piso 3°, Of. 16 — Entre Pasteur y Azcuénaga, C.A.B.A.', {
+      id: 'mudanza',
+      duration: Infinity,
+    })
+  }, [])
+
   return (
     <Layout>
       <div className="flex flex-col gap-24">
